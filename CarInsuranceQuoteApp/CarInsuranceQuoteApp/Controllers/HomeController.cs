@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using CarInsuranceQuoteApp.Models;
 
@@ -98,6 +100,7 @@ namespace CarInsuranceQuoteApp.Controllers
                     Q.FirstName = FirstName;
                     Q.LastName = LastName;
                     Q.EmailAddress = EmailAddress;
+                    Q.Price = Convert.ToDouble(Price);
 
                     db.Register2.Add(Q);
                     db.SaveChanges();

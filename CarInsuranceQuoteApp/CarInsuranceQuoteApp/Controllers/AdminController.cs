@@ -25,6 +25,7 @@ namespace CarInsuranceQuoteApp.Controllers
                     quotes.FirstName = q.FirstName; //along with the user's first name
                     quotes.LastName = q.LastName; //last name
                     quotes.EmailAddress = q.EmailAddress; //and email address.
+                    quotes.Price = q.Price;
                     QuoteList.Add(quotes); 
                 }
 
