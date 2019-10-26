@@ -1,0 +1,40 @@
+﻿@using CarInsuranceQuoteApp.Models
+@model List<Register2>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+
+        <div class="card-header text-center">
+            <h3 class="m-0">Quotes:</h3>
+        </div>
+
+        <div class="card-body">
+            @foreach (var quote in Model)
+            {
+                using (Html.BeginForm("Index", "Admin", FormMethod.Get))
+                {
+                    <div class="row">
+                        <ul>
+                            <li class="col">
+                                @quote.FirstName
+                            </li>
+
+                            <li class="col">
+                                @quote.LastName
+                            </li>
+
+                            <li class="col">
+                                @quote.EmailAddress
+                            </li>
+                            <li class="col">
+                                @quote.Price
+                            </li>
+                        </ul>
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+</div>

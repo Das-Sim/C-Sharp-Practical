@@ -1,0 +1,70 @@
+﻿@using CarInsuranceQuoteApp.Models
+@model List<Register2>
+
+<!DOCTYPE html>
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Quote", "Home", FormMethod.Post)) //You must get the following information from the user:
+            {
+            <div class="row no-gutters">
+                <h2 style="margin-top:30px;">Welcome to Das A Car Quote Online!</h2>
+                <h3 style="margin-top:30px;">Start your registration:</h3>
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" /> <!--First Name-->
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" /> <!--Last Name-->
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email-Address" /> <!--Email Address-->
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Age" type="date" class="form-control" /> <!--Date of Birth-->
+                </div>
+            </div>
+
+                <div class="row no-gutters">
+                    <h4>Car Details:</h4>
+                    <div class="form-group col-md-12">
+                        <input name="vYear" type="text" class="form-control" placeholder="vehicle year" /> <!--Car Year-->
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="vMake" type="text" class="form-control" placeholder="vehicle make" /> <!--Car Make-->
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="vModel" type="text" class="form-control" placeholder="vehicle model" /> <!--Car Model-->
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <h4> Have you ever recieved a citation for Driving Under the Influence (DUI)? (Yes or No):</h4> <!--If they have ever had a DUI.-->
+                    <div class="form-group col-md-12">
+                        <input name="DUI" type="text" class="form-control" placeholder="yes/no" />
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <h4> Have you ever recieved a citation for Speeding? Enter number of citations:</h4> <!--How many speeding tickets they have.-->
+                    <div class="form-group col-md-12">
+                        <input name="Speeder" type="text" class="form-control" placeholder="0-100" />
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <h4>Choose from our coverage options: a. Full Coverage or b. Liability Coverage?:</h4> <!--Would they like full coverage or liability?-->
+                    <div class="form-group col-md-12">
+                        <input name="Coverage" type="text" class="form-control" placeholder="a or b" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary col-md-5">Submit</button>
+
+            }
+        </div>
+
+    </div>
+</div>
